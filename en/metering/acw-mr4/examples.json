@@ -1,0 +1,135 @@
+[
+  {
+    "description": "Digital inputs and counter",
+    "type": "uplink",
+    "input": {
+      "bytes": "a001010400000052",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "counter0": 82,
+        "input_state0": 1,
+        "input_state1": 0,
+        "input_state2": 0,
+        "input_state3": 0
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Keep alive frame",
+    "type": "uplink",
+    "input": {
+      "bytes": "810e100dac",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Keep alive frame",
+        "voltagec": 3.5,
+        "voltagev": 3.6
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Digital input change of state",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00110",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "input_state0": "switched low",
+        "input_state1": "low",
+        "input_state2": "low",
+        "input_state3": "low"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Historised digital inputs",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c010f05",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "period": 60,
+        "input_state0": [
+          1,
+          1
+        ],
+        "input_state1": [
+          1,
+          0
+        ],
+        "input_state2": [
+          1,
+          1
+        ],
+        "input_state3": [
+          1,
+          0
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the keep alive period to once a day",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the datalogging period to 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Enable the timestamp in uplinks",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

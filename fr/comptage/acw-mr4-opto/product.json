@@ -1,0 +1,16 @@
+{
+  "id": "acw-mr4-opto",
+  "name": "ACW-MR4-OPTO",
+  "summary": "Lecteur optique de compteur",
+  "family": "comptage",
+  "language": "fr",
+  "version": "1.0.0",
+  "codec": "acw-mr4-opto-codec.js",
+  "examples": "examples.json",
+  "image": "acw-mr4-opto.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

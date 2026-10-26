@@ -1,0 +1,615 @@
+[
+  {
+    "description": "4-20 mA current on input 1",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00b0578",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "current0": 14
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Historised current and voltage, 2 samples",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c0b03e804b01a09600974",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "period": 60,
+        "current0": [
+          10,
+          12
+        ],
+        "voltage1": [
+          2.4,
+          2.42
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Internal sensor temperature and humidity",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00b0578080a12090e30",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "current0": 14,
+        "temperature0": 25.78,
+        "humidity0": 36.32
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Digital inputs and counter of input 1",
+    "type": "uplink",
+    "input": {
+      "bytes": "a001010400000052",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "counter0": 82,
+        "input_state0": 1,
+        "input_state1": 0,
+        "input_state2": 0,
+        "input_state3": 0
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Input 1 change of state",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00111",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "input_state0": "switched high",
+        "input_state1": "low",
+        "input_state2": "low",
+        "input_state3": "low"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Percentage on input 1",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00c1388",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "rate0": 50
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Extended measurement frame (LTE-M / NB-IoT)",
+    "type": "uplink",
+    "input": {
+      "bytes": "8900000001010001003c0a1388",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Extended measurement frame",
+        "frame_index": 1,
+        "period": 60,
+        "voltage0": 5
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Timestamped extended measurement frame, history of 2 samples",
+    "type": "uplink",
+    "input": {
+      "bytes": "c96a803ba600000001020002003c0a13881482151c157c1a0bb80c1c0c800ce4",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Extended measurement frame",
+        "frame_index": 1,
+        "period": 60,
+        "voltage0": [
+          5,
+          5.25,
+          5.404,
+          5.5
+        ],
+        "voltage1": [
+          3,
+          3.1,
+          3.2,
+          3.3
+        ],
+        "timestamp": "2026-08-15T10:12:54.000Z"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Alert: high threshold exceeded, current of input 1",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d4b03e8",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Alert frame",
+        "current0": 10,
+        "alert": "High threshold exceeded on current channel 0"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "End of alert: voltage of input 2 back within the thresholds",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d1a1194",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Alert frame",
+        "voltage1": 4.5,
+        "alert": "Back within thresholds on voltage channel 1"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "WLK: detection cable voltage, temperature and humidity",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00a0010080a12090e30",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "voltage0": 0.016,
+        "temperature0": 25.78,
+        "humidity0": 36.32
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "WLK: leak detected (cable voltage above the high threshold)",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d4a02c9",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Alert frame",
+        "voltage0": 0.713,
+        "alert": "High threshold exceeded on voltage channel 0"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "WLK: end of leak alert",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d0a0010",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Alert frame",
+        "voltage0": 0.016,
+        "alert": "Back within thresholds on voltage channel 0"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Cable cut detected",
+    "type": "uplink",
+    "input": {
+      "bytes": "8f1c20",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Specific frame",
+        "cable_cut": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Cable restored",
+    "type": "uplink",
+    "input": {
+      "bytes": "8f1c01",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Specific frame",
+        "cable_cut": 0
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Keep alive frame",
+    "type": "uplink",
+    "input": {
+      "bytes": "810d240c68",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Keep alive frame",
+        "voltagec": 3.176,
+        "voltagev": 3.364
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Keep alive frame with GPS position (LTE-M / NB-IoT)",
+    "type": "uplink",
+    "input": {
+      "bytes": "810d240c6803293ee90513c6",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Keep alive frame",
+        "voltagec": 3.176,
+        "voltagev": 3.364,
+        "gps_status": "Position found",
+        "latitude": 45.05135,
+        "longitude": 5.5457
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Configuration accepted",
+    "type": "uplink",
+    "input": {
+      "bytes": "8600",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Response to a configuration frame",
+        "configuration_accepted": 1,
+        "rejected_parameters": []
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Input configuration read-back",
+    "type": "uplink",
+    "input": {
+      "bytes": "87041a161b5121262200",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Response to a command frame",
+        "command": 4,
+        "config_input1": "Analog input, 4-20 mA",
+        "config_input2": "Digital input, pull-up, rising edge",
+        "config_input3": "Analog input, 0-10 V",
+        "config_input4": "Disabled"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Downlink error: unknown parameter",
+    "type": "uplink",
+    "input": {
+      "bytes": "8803",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Response to an invalid frame",
+        "downlink_error": "Unknown parameter"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the keep alive period to once a day",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the datalogging period to 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Enable the timestamp in uplinks",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set input 1 to 4-20 mA",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput1Config": {
+          "mode": "analog",
+          "analogType": "4-20mA"
+        }
+      }
+    },
+    "output": {
+      "bytes": "1a16",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set input 3 to 0-10 V",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput3Config": {
+          "mode": "analog",
+          "analogType": "0-10V"
+        }
+      }
+    },
+    "output": {
+      "bytes": "2126",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set input 2 to digital input, pull-up, rising and falling edges",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput2Config": {
+          "mode": "edge",
+          "pull": "up",
+          "trigger": "both"
+        }
+      }
+    },
+    "output": {
+      "bytes": "1bd1",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set input 2 to counter",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput2Config": {
+          "mode": "counter"
+        }
+      }
+    },
+    "output": {
+      "bytes": "1b43",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Disable input 4",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput4Config": {
+          "mode": "disabled"
+        }
+      }
+    },
+    "output": {
+      "bytes": "2200",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Analog input 1 threshold: 4-10 mA, 0.5 mA hysteresis",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setAnalog1Threshold": {
+          "analogType": "4-20mA",
+          "high": 10,
+          "low": 4,
+          "hysteresis": 0.5,
+          "duration": 1
+        }
+      }
+    },
+    "output": {
+      "bytes": "d50900e803900132000100",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Analog input 2 threshold: 0-5 V, transmission every 5 min during an alert",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setAnalog2Threshold": {
+          "analogType": "0-10V",
+          "high": 5,
+          "low": 0,
+          "hysteresis": 1.5,
+          "duration": 1,
+          "fastTxPeriod": 5
+        }
+      }
+    },
+    "output": {
+      "bytes": "e4090088130000dc050105",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Analog input 1 calibration: 0.1 mA offset, coefficient 1",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setAnalog1Calibration": {
+          "analogType": "4-20mA",
+          "offset": 0.1,
+          "coefficient": 1
+        }
+      }
+    },
+    "output": {
+      "bytes": "d805000a00e803",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Internal temperature sensor calibration: 0.40 °C offset",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTemperatureCalibration": {
+          "offset": 0.4,
+          "coefficient": 1
+        }
+      }
+    },
+    "output": {
+      "bytes": "d905002800e803",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set counter 2 to 3728",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setCounter2": 3728
+      }
+    },
+    "output": {
+      "bytes": "c1061102900e0000",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Read the configuration back",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "getConfiguration": true
+      }
+    },
+    "output": {
+      "bytes": "c10804030b141a1b2122",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

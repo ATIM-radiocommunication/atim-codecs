@@ -1,0 +1,113 @@
+{
+    "description": "ACW-MR2-EX: Compteur d’impulsions ATEX",
+    "version": "2.0.0",
+    "properties": {
+        "wirecut": {
+            "type": "uint8"
+        },
+        "counter_init": {
+            "type": "uint32"
+        },
+        "periode": {
+            "type": "uint16",
+            "units": "minutes"
+        },
+        "voltagec": {
+            "type": "float",
+            "units": "volts"
+        },
+        "voltagev": {
+            "type": "float",
+            "units": "volts"
+        },
+        "compteur1": {
+            "type": "uint32"
+        },
+        "index0": {
+            "type": "uint32"
+        },
+        "index1": {
+            "type": "uint32"
+        },
+        "index2": {
+            "type": "uint32"
+        },
+        "index3": {
+            "type": "uint32"
+        },
+        "index4": {
+            "type": "uint32"
+        },
+        "index5": {
+            "type": "uint32"
+        },
+        "compteur2": {
+            "type": "uint32"
+        },
+        "logic_level0": {
+            "type": "uint8"
+        },
+        "logic_level1": {
+            "type": "uint8"
+        },
+        "delta1": {
+            "type": "uint32"
+        },
+        "delta2": {
+            "type": "uint32"
+        },
+        "delta3": {
+            "type": "uint32"
+        },
+        "delta4": {
+            "type": "uint32"
+        },
+        "delta5": {
+            "type": "uint32"
+        },
+        "frame_type": {
+            "type": "string"
+        },
+        "alerte": {
+            "type": "string"
+        },
+        "erreur": {
+            "type": "string"
+        },
+        "horodatage": {
+            "type": "string"
+        },
+        "uplinkFCnt": {
+            "name": "uplinkFCnt",
+            "type": "uint32"
+        },
+        "uplinkRSSI": {
+            "name": "uplinkRSSI",
+            "type": "int16",
+            "units": "decibels-millivolt"
+        },
+        "uplinkSNR": {
+            "name": "uplinkSNR",
+            "type": "float",
+            "units": "decibels"
+        },
+        "setKeepAlivePeriod": {
+            "type": "string",
+            "downlink": true
+        },
+        "setDataloggingPeriod": {
+            "type": "uint16",
+            "downlink": true
+        },
+        "setTimestamp": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "scheduleDownlinkStatus": {
+            "name": "scheduleDownlinkStatus",
+            "type": "string"
+        }
+    },
+    "decoder": "acw-mr2-ex-bacnet-codec.js",
+    "encoder": "acw-mr2-ex-bacnet-codec.js"
+}

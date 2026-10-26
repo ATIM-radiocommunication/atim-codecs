@@ -1,0 +1,16 @@
+{
+  "id": "acw-tcr",
+  "name": "ACW-TCR",
+  "summary": "Sonde de température et d’humidité à inertie",
+  "family": "environnement",
+  "language": "fr",
+  "version": "1.0.0",
+  "codec": "acw-tcr-codec.js",
+  "examples": "examples.json",
+  "image": "acw-tcr.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

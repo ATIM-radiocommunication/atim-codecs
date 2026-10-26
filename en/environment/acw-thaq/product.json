@@ -1,0 +1,15 @@
+{
+  "id": "acw-thaq",
+  "name": "ACW-THAQ",
+  "summary": "Indoor air quality sensor",
+  "family": "environment",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-thaq-codec.js",
+  "examples": "examples.json",
+  "image": "acw-thaq.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink"
+  ]
+}

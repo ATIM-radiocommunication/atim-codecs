@@ -1,0 +1,169 @@
+[
+  {
+    "description": "Tension du câble de détection et deux températures",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00a000c0809341807da",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "tension": 0.012,
+        "temperature0": 23.56,
+        "temperature1": 20.1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie",
+    "type": "uplink",
+    "input": {
+      "bytes": "810e100dac",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de vie",
+        "voltagec": 3.5,
+        "voltagev": 3.6
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Tension du câble de détection historisée",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c0a000c000b",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "periode": 60,
+        "tension": [
+          0.012,
+          0.011
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de test au démarrage, câble au sec",
+    "type": "uplink",
+    "input": {
+      "bytes": "850a00000809341807da",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de test",
+        "tension": 0,
+        "temperature0": 23.56,
+        "temperature1": 20.1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Fuite détectée (dépassement du seuil haut)",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d4a02c9",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d'alerte",
+        "tension": 0.713,
+        "alerte": "Dépassement du seuil haut sur la tension"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Fin d’alerte de fuite",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d0a0010",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d'alerte",
+        "tension": 0.016,
+        "alerte": "Retour entre les seuils sur la tension"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie une fois par jour",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Période d'enregistrement à 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Activer l'horodatage des trames montantes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie une fois par jour (valeur en français)",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Tous les jours"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

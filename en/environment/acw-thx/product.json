@@ -1,0 +1,16 @@
+{
+  "id": "acw-thx",
+  "name": "ACW-THX",
+  "summary": "Temperature & humidity sensor",
+  "family": "environment",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-thx-codec.js",
+  "examples": "examples.json",
+  "image": "acw-thx.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

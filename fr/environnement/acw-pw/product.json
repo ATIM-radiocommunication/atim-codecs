@@ -1,0 +1,16 @@
+{
+  "id": "acw-pw",
+  "name": "ACW-PW",
+  "summary": "Contrôle de chauffage par fil pilote",
+  "family": "environnement",
+  "language": "fr",
+  "version": "1.0.0",
+  "codec": "acw-pw-codec.js",
+  "examples": "examples.json",
+  "image": "acw-pw.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

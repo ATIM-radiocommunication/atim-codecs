@@ -1,0 +1,16 @@
+{
+  "id": "acw-mt1",
+  "name": "ACW-MT1",
+  "summary": "Entrée TOR ou comptage",
+  "family": "entrees-sorties",
+  "language": "fr",
+  "version": "1.0.0",
+  "codec": "acw-mt1-codec.js",
+  "examples": "examples.json",
+  "image": "acw-mt1.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

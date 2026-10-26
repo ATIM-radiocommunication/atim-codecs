@@ -1,0 +1,161 @@
+[
+  {
+    "description": "Entrées et sorties digitales, température et compteur",
+    "type": "uplink",
+    "input": {
+      "bytes": "6efd0100fa00017ce6",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d’entrées/sorties digitales, température et compteur 1",
+        "temperature0": 25,
+        "compteur1": 97510,
+        "output_state0": 1,
+        "output_state1": 0,
+        "output_state2": 0,
+        "output_state3": 0,
+        "output_state4": 0,
+        "output_state5": 0,
+        "output_state6": 0,
+        "output_state7": 0,
+        "input_state0": 1,
+        "input_state1": 0,
+        "input_state2": 1,
+        "input_state3": 1,
+        "input_state4": 1,
+        "input_state5": 1,
+        "input_state6": 1,
+        "input_state7": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie",
+    "type": "uplink",
+    "input": {
+      "bytes": "810e100dac",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de vie",
+        "voltagec": 3.5,
+        "voltagev": 3.6
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrées digitales, température négative et compteur",
+    "type": "uplink",
+    "input": {
+      "bytes": "4ef5fffff600017ce6",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d’entrées digitales,température et compteur 1",
+        "temperature0": -1,
+        "compteur1": 97510,
+        "input_state0": 1,
+        "input_state1": 0,
+        "input_state2": 1,
+        "input_state3": 0,
+        "input_state4": 1,
+        "input_state5": 1,
+        "input_state6": 1,
+        "input_state7": 1,
+        "input_state8": 1,
+        "input_state9": 1,
+        "input_state10": 1,
+        "input_state11": 1,
+        "input_state12": 1,
+        "input_state13": 1,
+        "input_state14": 1,
+        "input_state15": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de mesure de température",
+    "type": "uplink",
+    "input": {
+      "bytes": "a0080885",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "temperature0": 21.81
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie une fois par jour",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Période d'enregistrement à 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Activer l'horodatage des trames montantes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie une fois par jour (valeur en français)",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Tous les jours"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

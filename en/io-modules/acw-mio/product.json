@@ -1,0 +1,16 @@
+{
+  "id": "acw-mio",
+  "name": "ACW-MIO",
+  "summary": "4-20 mA / 0-10 V analog inputs and digital inputs",
+  "family": "io-modules",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-mio-codec.js",
+  "examples": "examples.json",
+  "image": "acw-mio-2m8.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

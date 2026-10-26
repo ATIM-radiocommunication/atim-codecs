@@ -1,0 +1,61 @@
+[
+  {
+    "description": "Example 0x01",
+    "type": "uplink",
+    "input": {
+      "bytes": "010e100dac64",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frameType": "HEART_BEAT",
+        "radioIdleVoltage": 3600,
+        "radioTransmitVoltage": 3500
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Example 0x03",
+    "type": "uplink",
+    "input": {
+      "bytes": "0340010203",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frameType": "PERIODIC_DATA",
+        "header": 64,
+        "payload": "010203"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Example 0x83",
+    "type": "uplink",
+    "input": {
+      "bytes": "830110fa2132195305",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "errorCode": 250,
+        "errorSource": "DEVICE",
+        "errorType": "TIMEOUT",
+        "frameType": "ERROR",
+        "functionCode": 50,
+        "parameter": 1,
+        "radioHeader": 16,
+        "register_lsb": 83,
+        "register_msb": 25,
+        "register_nbr": 5,
+        "slave": 33
+      },
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

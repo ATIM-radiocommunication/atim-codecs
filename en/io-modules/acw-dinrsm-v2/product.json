@@ -1,0 +1,14 @@
+{
+  "id": "acw-dinrsm-v2",
+  "name": "ACW-DINRSM-V2",
+  "summary": "Modbus master gateway",
+  "family": "io-modules",
+  "language": "en",
+  "version": "1.0.1",
+  "codec": "acw-dinrsm-v2-codec.js",
+  "examples": "examples.json",
+  "image": "acw-dinrsm-v2.png",
+  "entryPoints": [
+    "decodeUplink"
+  ]
+}

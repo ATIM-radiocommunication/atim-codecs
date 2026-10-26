@@ -1,0 +1,76 @@
+{
+    "description": "ACW-TMxP: Sondes de température PT1000",
+    "version": "1.0.0",
+    "properties": {
+        "temperature0": {
+            "type": "float",
+            "units": "celsius"
+        },
+        "temperature1": {
+            "type": "float",
+            "units": "celsius"
+        },
+        "compteur0": {
+            "type": "uint32"
+        },
+        "input_state0": {
+            "type": "uint8"
+        },
+        "periode": {
+            "type": "uint16",
+            "units": "minutes"
+        },
+        "voltagec": {
+            "type": "float",
+            "units": "volts"
+        },
+        "voltagev": {
+            "type": "float",
+            "units": "volts"
+        },
+        "frame_type": {
+            "type": "string"
+        },
+        "alerte": {
+            "type": "string"
+        },
+        "erreur": {
+            "type": "string"
+        },
+        "horodatage": {
+            "type": "string"
+        },
+        "uplinkFCnt": {
+            "name": "uplinkFCnt",
+            "type": "uint32"
+        },
+        "uplinkRSSI": {
+            "name": "uplinkRSSI",
+            "type": "int16",
+            "units": "decibels-millivolt"
+        },
+        "uplinkSNR": {
+            "name": "uplinkSNR",
+            "type": "float",
+            "units": "decibels"
+        },
+        "setKeepAlivePeriod": {
+            "type": "string",
+            "downlink": true
+        },
+        "setDataloggingPeriod": {
+            "type": "uint16",
+            "downlink": true
+        },
+        "setTimestamp": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "scheduleDownlinkStatus": {
+            "name": "scheduleDownlinkStatus",
+            "type": "string"
+        }
+    },
+    "decoder": "acw-tmxp-bacnet-codec.js",
+    "encoder": "acw-tmxp-bacnet-codec.js"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "acw-mr4",
+  "name": "ACW-MR4",
+  "summary": "Pulse counter & dry contacts",
+  "family": "metering",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-mr4-codec.js",
+  "examples": "examples.json",
+  "image": "acw-mr4.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

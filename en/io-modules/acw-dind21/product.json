@@ -1,0 +1,16 @@
+{
+  "id": "acw-dind21",
+  "name": "ACW-DINDxx (DIND21)",
+  "summary": "Digital I/O module",
+  "family": "io-modules",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-dind21-codec.js",
+  "examples": "examples.json",
+  "image": "acw-dind21.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

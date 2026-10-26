@@ -1,0 +1,154 @@
+[
+  {
+    "description": "Detection cable voltage and two temperatures",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00a000c0809341807da",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "voltage": 0.012,
+        "temperature0": 23.56,
+        "temperature1": 20.1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Keep alive frame",
+    "type": "uplink",
+    "input": {
+      "bytes": "810e100dac",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Keep alive frame",
+        "voltagec": 3.5,
+        "voltagev": 3.6
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Historised detection cable voltage",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c0a000c000b",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "period": 60,
+        "voltage": [
+          0.012,
+          0.011
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Test frame at start-up, dry cable",
+    "type": "uplink",
+    "input": {
+      "bytes": "850a00000809341807da",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Test frame",
+        "voltage": 0,
+        "temperature0": 23.56,
+        "temperature1": 20.1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Leak detected (high threshold exceeded)",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d4a02c9",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Alert frame",
+        "voltage": 0.713,
+        "alert": "High threshold exceeded on voltage"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "End of leak alert",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d0a0010",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Alert frame",
+        "voltage": 0.016,
+        "alert": "Back within thresholds on voltage"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the keep alive period to once a day",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the datalogging period to 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Enable the timestamp in uplinks",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

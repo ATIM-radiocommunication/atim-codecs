@@ -1,0 +1,16 @@
+{
+  "id": "acw-cts",
+  "name": "ACW-CTS",
+  "summary": "Self-powered current sensor",
+  "family": "measurement",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-cts-codec.js",
+  "examples": "examples.json",
+  "image": "acw-cts.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

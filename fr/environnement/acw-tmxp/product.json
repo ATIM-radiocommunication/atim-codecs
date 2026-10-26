@@ -1,0 +1,16 @@
+{
+  "id": "acw-tmxp",
+  "name": "ACW-TMxP",
+  "summary": "Sondes de température PT1000",
+  "family": "environnement",
+  "language": "fr",
+  "version": "1.0.0",
+  "codec": "acw-tmxp-codec.js",
+  "examples": "examples.json",
+  "image": "acw-tmxp.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+    "description": "ACW-MR4: Pulse counter & dry contacts",
+    "version": "1.0.0",
+    "properties": {
+        "period": {
+            "type": "uint16",
+            "units": "minutes"
+        },
+        "voltagec": {
+            "type": "float",
+            "units": "volts"
+        },
+        "voltagev": {
+            "type": "float",
+            "units": "volts"
+        },
+        "counter0": {
+            "type": "uint32"
+        },
+        "counter1": {
+            "type": "uint32"
+        },
+        "counter2": {
+            "type": "uint32"
+        },
+        "counter3": {
+            "type": "uint32"
+        },
+        "input_state0": {
+            "type": "uint8"
+        },
+        "input_state1": {
+            "type": "uint8"
+        },
+        "input_state2": {
+            "type": "uint8"
+        },
+        "input_state3": {
+            "type": "uint8"
+        },
+        "frame_type": {
+            "type": "string"
+        },
+        "alert": {
+            "type": "string"
+        },
+        "error": {
+            "type": "string"
+        },
+        "timestamp": {
+            "type": "string"
+        },
+        "uplinkFCnt": {
+            "name": "uplinkFCnt",
+            "type": "uint32"
+        },
+        "uplinkRSSI": {
+            "name": "uplinkRSSI",
+            "type": "int16",
+            "units": "decibels-millivolt"
+        },
+        "uplinkSNR": {
+            "name": "uplinkSNR",
+            "type": "float",
+            "units": "decibels"
+        },
+        "setKeepAlivePeriod": {
+            "type": "string",
+            "downlink": true
+        },
+        "setDataloggingPeriod": {
+            "type": "uint16",
+            "downlink": true
+        },
+        "setTimestamp": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "scheduleDownlinkStatus": {
+            "name": "scheduleDownlinkStatus",
+            "type": "string"
+        }
+    },
+    "decoder": "acw-mr4-bacnet-codec.js",
+    "encoder": "acw-mr4-bacnet-codec.js"
+}

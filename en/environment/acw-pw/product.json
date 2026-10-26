@@ -1,0 +1,16 @@
+{
+  "id": "acw-pw",
+  "name": "ACW-PW",
+  "summary": "Pilot wire heating control",
+  "family": "environment",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-pw-codec.js",
+  "examples": "examples.json",
+  "image": "acw-pw.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

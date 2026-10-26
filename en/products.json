@@ -1,0 +1,305 @@
+[
+  {
+    "id": "acw-thx",
+    "name": "ACW-THX",
+    "summary": "Temperature & humidity sensor",
+    "family": "environment",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-thx-codec.js",
+    "examples": "examples.json",
+    "image": "acw-thx.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "environment/acw-thx"
+  },
+  {
+    "id": "acw-thaq",
+    "name": "ACW-THAQ",
+    "summary": "Indoor air quality sensor",
+    "family": "environment",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-thaq-codec.js",
+    "examples": "examples.json",
+    "image": "acw-thaq.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink"
+    ],
+    "path": "environment/acw-thaq"
+  },
+  {
+    "id": "acw-tcr",
+    "name": "ACW-TCR",
+    "summary": "Temperature & humidity probe with inertia",
+    "family": "environment",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-tcr-codec.js",
+    "examples": "examples.json",
+    "image": "acw-tcr.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "environment/acw-tcr"
+  },
+  {
+    "id": "acw-tmxp",
+    "name": "ACW-TMxP",
+    "summary": "PT1000 temperature probes",
+    "family": "environment",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-tmxp-codec.js",
+    "examples": "examples.json",
+    "image": "acw-tmxp.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "environment/acw-tmxp"
+  },
+  {
+    "id": "acw-ptmxp",
+    "name": "ACW-PTMxP",
+    "summary": "Differential pressure transmitter",
+    "family": "environment",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-ptmxp-codec.js",
+    "examples": "examples.json",
+    "image": "acw-ptmxp.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "environment/acw-ptmxp"
+  },
+  {
+    "id": "acw-pw",
+    "name": "ACW-PW",
+    "summary": "Pilot wire heating control",
+    "family": "environment",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-pw-codec.js",
+    "examples": "examples.json",
+    "image": "acw-pw.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "environment/acw-pw"
+  },
+  {
+    "id": "acw-mr2-ex",
+    "name": "ACW-MR2-EX",
+    "summary": "ATEX pulse counter",
+    "family": "metering",
+    "language": "en",
+    "version": "2.0.0",
+    "codec": "acw-mr2-ex-codec.js",
+    "examples": "examples.json",
+    "image": "acw-mr2-ex.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "metering/acw-mr2-ex"
+  },
+  {
+    "id": "acw-mr4",
+    "name": "ACW-MR4",
+    "summary": "Pulse counter & dry contacts",
+    "family": "metering",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-mr4-codec.js",
+    "examples": "examples.json",
+    "image": "acw-mr4.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "metering/acw-mr4"
+  },
+  {
+    "id": "acw-mr4-opto",
+    "name": "ACW-MR4-OPTO",
+    "summary": "Optical meter reader",
+    "family": "metering",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-mr4-opto-codec.js",
+    "examples": "examples.json",
+    "image": "acw-mr4-opto.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "metering/acw-mr4-opto"
+  },
+  {
+    "id": "acw-cts",
+    "name": "ACW-CTS",
+    "summary": "Self-powered current sensor",
+    "family": "measurement",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-cts-codec.js",
+    "examples": "examples.json",
+    "image": "acw-cts.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "measurement/acw-cts"
+  },
+  {
+    "id": "acw-gaug",
+    "name": "ACW-GAUG",
+    "summary": "Tank level gauge",
+    "family": "measurement",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-gaug-codec.js",
+    "examples": "examples.json",
+    "image": "acw-gaug.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "measurement/acw-gaug"
+  },
+  {
+    "id": "acw-pir",
+    "name": "ACW-PIRxx",
+    "summary": "Motion detector",
+    "family": "detection",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-pir-codec.js",
+    "examples": "examples.json",
+    "image": "acw-pir.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "detection/acw-pir"
+  },
+  {
+    "id": "acw-wll",
+    "name": "ACW-WLL",
+    "summary": "Leak detector",
+    "family": "detection",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-wll-codec.js",
+    "examples": "examples.json",
+    "image": "acw-wll.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "detection/acw-wll"
+  },
+  {
+    "id": "acw-dind21",
+    "name": "ACW-DINDxx (DIND21)",
+    "summary": "Digital I/O module",
+    "family": "io-modules",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-dind21-codec.js",
+    "examples": "examples.json",
+    "image": "acw-dind21.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "io-modules/acw-dind21"
+  },
+  {
+    "id": "acw-dind88",
+    "name": "ACW-DINDxx (DIND88)",
+    "summary": "Digital & analog input module",
+    "family": "io-modules",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-dind88-codec.js",
+    "examples": "examples.json",
+    "image": "acw-dind88.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "io-modules/acw-dind88"
+  },
+  {
+    "id": "acw-dinrsm-v2",
+    "name": "ACW-DINRSM-V2",
+    "summary": "Modbus master gateway",
+    "family": "io-modules",
+    "language": "en",
+    "version": "1.0.1",
+    "codec": "acw-dinrsm-v2-codec.js",
+    "examples": "examples.json",
+    "image": "acw-dinrsm-v2.png",
+    "entryPoints": [
+      "decodeUplink"
+    ],
+    "path": "io-modules/acw-dinrsm-v2"
+  },
+  {
+    "id": "acw-mio",
+    "name": "ACW-MIO",
+    "summary": "4-20 mA / 0-10 V analog inputs and digital inputs",
+    "family": "io-modules",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-mio-codec.js",
+    "examples": "examples.json",
+    "image": "acw-mio-2m8.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "io-modules/acw-mio"
+  },
+  {
+    "id": "acw-mt1",
+    "name": "ACW-MT1",
+    "summary": "Digital or counting input",
+    "family": "io-modules",
+    "language": "en",
+    "version": "1.0.0",
+    "codec": "acw-mt1-codec.js",
+    "examples": "examples.json",
+    "image": "acw-mt1.png",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "io-modules/acw-mt1"
+  }
+]

@@ -1,0 +1,340 @@
+[
+  {
+    "description": "Compteur de l’entrée",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00400000885",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "compteur0": 2181
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Compteur historisé, 2 échantillons",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c04000008a400000885",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "periode": 60,
+        "compteur0": [
+          2212,
+          2181
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "État de l’entrée et compteur",
+    "type": "uplink",
+    "input": {
+      "bytes": "a001010400000885",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "compteur0": 2181,
+        "input_state0": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Changement d’état de l’entrée",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00111",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "input_state0": "mise à l'état haut"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de mesure étendue (LTE-M / NB-IoT)",
+    "type": "uplink",
+    "input": {
+      "bytes": "8900000100010002003c040000003e0000003c",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure étendue",
+        "index_trame": 256,
+        "periode": 60,
+        "compteur0": [
+          62,
+          60
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie",
+    "type": "uplink",
+    "input": {
+      "bytes": "810d240c68",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de vie",
+        "voltagec": 3.176,
+        "voltagev": 3.364
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie avec position GPS (LTE-M / NB-IoT)",
+    "type": "uplink",
+    "input": {
+      "bytes": "810d240c6803293ee90513c6",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de vie",
+        "voltagec": 3.176,
+        "voltagev": 3.364,
+        "etat_gps": "Position trouvée",
+        "latitude": 45.05135,
+        "longitude": 5.5457
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Déplacement détecté par l’accéléromètre",
+    "type": "uplink",
+    "input": {
+      "bytes": "8e019e",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d'erreur",
+        "erreur": "Détection d’un déplacement/vol sur le produit"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Configuration acceptée",
+    "type": "uplink",
+    "input": {
+      "bytes": "8600",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Réponse à une trame de configuration",
+        "configuration_acceptee": 1,
+        "parametres_refuses": []
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Relecture de la configuration de l’entrée",
+    "type": "uplink",
+    "input": {
+      "bytes": "87041e52",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Réponse à une trame de commande",
+        "commande": 4,
+        "config_entree1": "Compteur, tirage haut, front montant"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Erreur de commande : paramètre inconnu",
+    "type": "uplink",
+    "input": {
+      "bytes": "8803",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Réponse à une trame erronee",
+        "erreur_downlink": "Paramètre inconnu"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie une fois par jour",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Période d'enregistrement à 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Activer l'horodatage des trames montantes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrée en compteur, tirage haut, front montant (configuration usine)",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput1Config": {
+          "mode": "counter",
+          "pull": "up",
+          "trigger": "rising"
+        }
+      }
+    },
+    "output": {
+      "bytes": "1e52",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrée en TOR, tirage haut, fronts montant et descendant",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput1Config": {
+          "mode": "edge",
+          "pull": "up",
+          "trigger": "both"
+        }
+      }
+    },
+    "output": {
+      "bytes": "1ed1",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrée désactivée",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput1Config": {
+          "mode": "disabled"
+        }
+      }
+    },
+    "output": {
+      "bytes": "1e00",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Forcer le compteur à 1000",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setCounter1": 1000
+      }
+    },
+    "output": {
+      "bytes": "c1061101e8030000",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Relire la configuration",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "getConfiguration": true
+      }
+    },
+    "output": {
+      "bytes": "c10504030b141e",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie une fois par jour (valeur en français)",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Tous les jours"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

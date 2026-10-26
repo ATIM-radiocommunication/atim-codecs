@@ -1,0 +1,630 @@
+[
+  {
+    "description": "Courant 4-20 mA sur l’entrée 1",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00b0578",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "courant0": 14
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Courant et tension historisés, 2 échantillons",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c0b03e804b01a09600974",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "periode": 60,
+        "courant0": [
+          10,
+          12
+        ],
+        "tension1": [
+          2.4,
+          2.42
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Température et humidité du capteur interne",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00b0578080a12090e30",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "courant0": 14,
+        "temperature0": 25.78,
+        "humidity0": 36.32
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrées TOR et compteur de l’entrée 1",
+    "type": "uplink",
+    "input": {
+      "bytes": "a001010400000052",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "compteur0": 82,
+        "input_state0": 1,
+        "input_state1": 0,
+        "input_state2": 0,
+        "input_state3": 0
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Changement d’état de l’entrée 1",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00111",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "input_state0": "mise à l'état haut",
+        "input_state1": "état bas",
+        "input_state2": "état bas",
+        "input_state3": "état bas"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Pourcentage sur l’entrée 1",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00c1388",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "taux0": 50
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de mesure étendue (LTE-M / NB-IoT)",
+    "type": "uplink",
+    "input": {
+      "bytes": "8900000001010001003c0a1388",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure étendue",
+        "index_trame": 1,
+        "periode": 60,
+        "tension0": 5
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de mesure étendue horodatée, historique de 2 échantillons",
+    "type": "uplink",
+    "input": {
+      "bytes": "c96a803ba600000001020002003c0a13881482151c157c1a0bb80c1c0c800ce4",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure étendue",
+        "index_trame": 1,
+        "periode": 60,
+        "tension0": [
+          5,
+          5.25,
+          5.404,
+          5.5
+        ],
+        "tension1": [
+          3,
+          3.1,
+          3.2,
+          3.3
+        ],
+        "horodatage": "2026-08-15T10:12:54.000Z"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Alerte : dépassement du seuil haut, courant de l’entrée 1",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d4b03e8",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d'alerte",
+        "courant0": 10,
+        "alerte": "Dépassement du seuil haut sur le courant voie 0"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Fin d’alerte : tension de l’entrée 2 revenue entre les seuils",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d1a1194",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d'alerte",
+        "tension1": 4.5,
+        "alerte": "Retour entre les seuils sur la tension voie 1"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "WLK : tension du câble de détection, température et humidité",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00a0010080a12090e30",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "tension0": 0.016,
+        "temperature0": 25.78,
+        "humidity0": 36.32
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "WLK : fuite détectée (dépassement du seuil haut de la tension du câble)",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d4a02c9",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d'alerte",
+        "tension0": 0.713,
+        "alerte": "Dépassement du seuil haut sur la tension voie 0"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "WLK : fin d’alerte de fuite",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d0a0010",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d'alerte",
+        "tension0": 0.016,
+        "alerte": "Retour entre les seuils sur la tension voie 0"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Coupure de câble détectée",
+    "type": "uplink",
+    "input": {
+      "bytes": "8f1c20",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame spécifique",
+        "cable_coupe": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Câble rétabli",
+    "type": "uplink",
+    "input": {
+      "bytes": "8f1c01",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame spécifique",
+        "cable_coupe": 0
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie",
+    "type": "uplink",
+    "input": {
+      "bytes": "810d240c68",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de vie",
+        "voltagec": 3.176,
+        "voltagev": 3.364
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie avec position GPS (LTE-M / NB-IoT)",
+    "type": "uplink",
+    "input": {
+      "bytes": "810d240c6803293ee90513c6",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de vie",
+        "voltagec": 3.176,
+        "voltagev": 3.364,
+        "etat_gps": "Position trouvée",
+        "latitude": 45.05135,
+        "longitude": 5.5457
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Configuration acceptée",
+    "type": "uplink",
+    "input": {
+      "bytes": "8600",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Réponse à une trame de configuration",
+        "configuration_acceptee": 1,
+        "parametres_refuses": []
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Relecture de la configuration des entrées",
+    "type": "uplink",
+    "input": {
+      "bytes": "87041a161b5121262200",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Réponse à une trame de commande",
+        "commande": 4,
+        "config_entree1": "Entrée analogique, 4-20 mA",
+        "config_entree2": "Entrée TOR, tirage haut, front montant",
+        "config_entree3": "Entrée analogique, 0-10 V",
+        "config_entree4": "Désactivée"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Erreur de commande : paramètre inconnu",
+    "type": "uplink",
+    "input": {
+      "bytes": "8803",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Réponse à une trame erronee",
+        "erreur_downlink": "Paramètre inconnu"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie une fois par jour",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Période d'enregistrement à 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Activer l'horodatage des trames montantes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrée 1 en 4-20 mA",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput1Config": {
+          "mode": "analog",
+          "analogType": "4-20mA"
+        }
+      }
+    },
+    "output": {
+      "bytes": "1a16",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrée 3 en 0-10 V",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput3Config": {
+          "mode": "analog",
+          "analogType": "0-10V"
+        }
+      }
+    },
+    "output": {
+      "bytes": "2126",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrée 2 en TOR, tirage haut, fronts montant et descendant",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput2Config": {
+          "mode": "edge",
+          "pull": "up",
+          "trigger": "both"
+        }
+      }
+    },
+    "output": {
+      "bytes": "1bd1",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrée 2 en compteur",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput2Config": {
+          "mode": "counter"
+        }
+      }
+    },
+    "output": {
+      "bytes": "1b43",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrée 4 désactivée",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setInput4Config": {
+          "mode": "disabled"
+        }
+      }
+    },
+    "output": {
+      "bytes": "2200",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Seuil de l’entrée analogique 1 : 4-10 mA, hystérésis 0,5 mA",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setAnalog1Threshold": {
+          "analogType": "4-20mA",
+          "high": 10,
+          "low": 4,
+          "hysteresis": 0.5,
+          "duration": 1
+        }
+      }
+    },
+    "output": {
+      "bytes": "d50900e803900132000100",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Seuil de l’entrée analogique 2 : 0-5 V, émission toutes les 5 min en alerte",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setAnalog2Threshold": {
+          "analogType": "0-10V",
+          "high": 5,
+          "low": 0,
+          "hysteresis": 1.5,
+          "duration": 1,
+          "fastTxPeriod": 5
+        }
+      }
+    },
+    "output": {
+      "bytes": "e4090088130000dc050105",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Calibration de l’entrée analogique 1 : offset 0,1 mA, coefficient 1",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setAnalog1Calibration": {
+          "analogType": "4-20mA",
+          "offset": 0.1,
+          "coefficient": 1
+        }
+      }
+    },
+    "output": {
+      "bytes": "d805000a00e803",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Calibration du capteur de température interne : offset 0,40 °C",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTemperatureCalibration": {
+          "offset": 0.4,
+          "coefficient": 1
+        }
+      }
+    },
+    "output": {
+      "bytes": "d905002800e803",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Forcer le compteur 2 à 3728",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setCounter2": 3728
+      }
+    },
+    "output": {
+      "bytes": "c1061102900e0000",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Relire la configuration",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "getConfiguration": true
+      }
+    },
+    "output": {
+      "bytes": "c10804030b141a1b2122",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie une fois par jour (valeur en français)",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Tous les jours"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

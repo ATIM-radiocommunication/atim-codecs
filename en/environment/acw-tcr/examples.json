@@ -1,0 +1,115 @@
+[
+  {
+    "description": "Physical and inertial temperature and humidity",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00808850917de180870191794",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "temperature_physical": 21.81,
+        "temperature_inertial": 21.6,
+        "humidity_physical": 61.1,
+        "humidity_inertial": 60.36
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Historised physical and inertial temperature and humidity",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c0808a408850917a217de1808ac089819178417c0",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "period": 60,
+        "temperature_physical": [
+          22.12,
+          21.81
+        ],
+        "temperature_inertial": [
+          22.2,
+          22
+        ],
+        "humidity_physical": [
+          60.5,
+          61.1
+        ],
+        "humidity_inertial": [
+          60.2,
+          60.8
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Keep alive frame",
+    "type": "uplink",
+    "input": {
+      "bytes": "810e100dac",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Keep alive frame",
+        "voltagec": 3.5,
+        "voltagev": 3.6
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the keep alive period to once a day",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the datalogging period to 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Enable the timestamp in uplinks",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

@@ -1,0 +1,375 @@
+[
+  {
+    "description": "Temperature and humidity",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00808850917de",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "temperature0": 21.81,
+        "humidity0": 61.1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Historised temperature and humidity",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c0808a408850917a217de",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "period": 60,
+        "temperature0": [
+          22.12,
+          21.81
+        ],
+        "humidity0": [
+          60.5,
+          61.1
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Keep alive frame",
+    "type": "uplink",
+    "input": {
+      "bytes": "810d240c68",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Keep alive frame",
+        "voltagec": 3.176,
+        "voltagev": 3.364
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Threshold alert",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d480a28",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Alert frame",
+        "alert": "High threshold exceeded on temperature channel 0",
+        "temperature0": 26
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Configuration accepted",
+    "type": "uplink",
+    "input": {
+      "bytes": "8600",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Response to a configuration frame",
+        "configuration_accepted": 1,
+        "rejected_parameters": []
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Configuration rejected for parameters 1 and 3",
+    "type": "uplink",
+    "input": {
+      "bytes": "8605",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Response to a configuration frame",
+        "configuration_accepted": 0,
+        "rejected_parameters": [
+          1,
+          3
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Pilot wire modes read-back",
+    "type": "uplink",
+    "input": {
+      "bytes": "870425002603",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Response to a command frame",
+        "command": 4,
+        "pilot_wire_mode": 0,
+        "pilot_wire_mode_label": "Calendar",
+        "calendar_default_mode": 3,
+        "calendar_default_mode_label": "Frost protection"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Program 1 read-back",
+    "type": "uplink",
+    "input": {
+      "bytes": "8704de07001e04387f0103",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Response to a command frame",
+        "command": 4,
+        "program1": "08:00-18:00;127;1",
+        "program1_label": "Mon, Tue, Wed, Thu, Fri, Sat, Sun · 08:00-18:00 UTC · Comfort"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Program 2 read-back (disabled)",
+    "type": "uplink",
+    "input": {
+      "bytes": "8704df07001e0438000303",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Response to a command frame",
+        "command": 4,
+        "program2": "08:00-18:00;0;3",
+        "program2_label": "Program disabled"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Timestamped command response",
+    "type": "uplink",
+    "input": {
+      "bytes": "c7653c1a00042501",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Response to a command frame",
+        "timestamp": "2023-10-27T20:13:52.000Z",
+        "command": 4,
+        "pilot_wire_mode": 1,
+        "pilot_wire_mode_label": "Comfort"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Downlink error: unknown parameter",
+    "type": "uplink",
+    "input": {
+      "bytes": "8803",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Response to an invalid frame",
+        "downlink_error": "Unknown parameter"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the keep alive period to once a day",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the datalogging period to 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Enable the timestamp in uplinks",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Pilot wire mode: comfort",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setPilotWireMode": 1
+      }
+    },
+    "output": {
+      "bytes": "2501",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Pilot wire mode: calendar",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setPilotWireMode": 0
+      }
+    },
+    "output": {
+      "bytes": "2500",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Calendar default mode: frost protection",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setPilotWireCalendarDefaultMode": 3
+      }
+    },
+    "output": {
+      "bytes": "2603",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Program 1: every day, 08:00-18:00 UTC, comfort",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setProgram1": "08:00-18:00;127;1"
+      }
+    },
+    "output": {
+      "bytes": "de07001e04387f0103",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Program 1: every day, 09:15-20:00 UTC, comfort",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setProgram1": "09:15-20:00;127;1"
+      }
+    },
+    "output": {
+      "bytes": "de070022b4b07f0103",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Program 2 disabled",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setProgram2": "08:00-18:00;0;3"
+      }
+    },
+    "output": {
+      "bytes": "df07001e0438000303",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Program 1 as an object, 08:01-18:00 UTC",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setProgram1": {
+          "start": "08:01",
+          "end": "18:00",
+          "days": 127,
+          "mode": 1
+        }
+      }
+    },
+    "output": {
+      "bytes": "de07001e14387f0103",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Read the pilot wire configuration",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "getPilotWireConfiguration": true
+      }
+    },
+    "output": {
+      "bytes": "c10a0425261e1f2021222324",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

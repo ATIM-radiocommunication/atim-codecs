@@ -1,0 +1,16 @@
+{
+  "id": "acw-dind88",
+  "name": "ACW-DINDxx (DIND88)",
+  "summary": "Module d’entrées digitales et analogiques",
+  "family": "entrees-sorties",
+  "language": "fr",
+  "version": "1.0.0",
+  "codec": "acw-dind88-codec.js",
+  "examples": "examples.json",
+  "image": "acw-dind88.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+    "description": "ACW-WLL: Leak detector",
+    "version": "1.0.0",
+    "properties": {
+        "voltage": {
+            "type": "float",
+            "units": "volts"
+        },
+        "temperature0": {
+            "type": "float",
+            "units": "celsius"
+        },
+        "temperature1": {
+            "type": "float",
+            "units": "celsius"
+        },
+        "period": {
+            "type": "uint16",
+            "units": "minutes"
+        },
+        "voltagec": {
+            "type": "float",
+            "units": "volts"
+        },
+        "voltagev": {
+            "type": "float",
+            "units": "volts"
+        },
+        "frame_type": {
+            "type": "string"
+        },
+        "alert": {
+            "type": "string"
+        },
+        "error": {
+            "type": "string"
+        },
+        "timestamp": {
+            "type": "string"
+        },
+        "uplinkFCnt": {
+            "name": "uplinkFCnt",
+            "type": "uint32"
+        },
+        "uplinkRSSI": {
+            "name": "uplinkRSSI",
+            "type": "int16",
+            "units": "decibels-millivolt"
+        },
+        "uplinkSNR": {
+            "name": "uplinkSNR",
+            "type": "float",
+            "units": "decibels"
+        },
+        "setKeepAlivePeriod": {
+            "type": "string",
+            "downlink": true
+        },
+        "setDataloggingPeriod": {
+            "type": "uint16",
+            "downlink": true
+        },
+        "setTimestamp": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "scheduleDownlinkStatus": {
+            "name": "scheduleDownlinkStatus",
+            "type": "string"
+        }
+    },
+    "decoder": "acw-wll-bacnet-codec.js",
+    "encoder": "acw-wll-bacnet-codec.js"
+}

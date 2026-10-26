@@ -1,0 +1,16 @@
+{
+  "id": "acw-mr2-ex",
+  "name": "ACW-MR2-EX",
+  "summary": "ATEX pulse counter",
+  "family": "metering",
+  "language": "en",
+  "version": "2.0.0",
+  "codec": "acw-mr2-ex-codec.js",
+  "examples": "examples.json",
+  "image": "acw-mr2-ex.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

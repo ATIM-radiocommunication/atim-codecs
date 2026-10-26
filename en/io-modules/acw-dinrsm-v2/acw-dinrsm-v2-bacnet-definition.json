@@ -1,0 +1,66 @@
+{
+    "description": "ACW-DINRSM-V2: Modbus master gateway",
+    "version": "1.0.1",
+    "properties": {
+        "frameType": {
+            "type": "string"
+        },
+        "radioIdleVoltage": {
+            "type": "uint16"
+        },
+        "radioTransmitVoltage": {
+            "type": "uint16"
+        },
+        "header": {
+            "type": "uint8"
+        },
+        "payload": {
+            "type": "string"
+        },
+        "parameter": {
+            "type": "uint8"
+        },
+        "radioHeader": {
+            "type": "uint8"
+        },
+        "errorCode": {
+            "type": "uint8"
+        },
+        "errorType": {
+            "type": "string"
+        },
+        "errorSource": {
+            "type": "string"
+        },
+        "slave": {
+            "type": "uint8"
+        },
+        "functionCode": {
+            "type": "uint8"
+        },
+        "register_msb": {
+            "type": "uint8"
+        },
+        "register_lsb": {
+            "type": "uint8"
+        },
+        "register_nbr": {
+            "type": "uint8"
+        },
+        "uplinkFCnt": {
+            "name": "uplinkFCnt",
+            "type": "uint32"
+        },
+        "uplinkRSSI": {
+            "name": "uplinkRSSI",
+            "type": "int16",
+            "units": "decibels-millivolt"
+        },
+        "uplinkSNR": {
+            "name": "uplinkSNR",
+            "type": "float",
+            "units": "decibels"
+        }
+    },
+    "decoder": "acw-dinrsm-v2-bacnet-codec.js"
+}

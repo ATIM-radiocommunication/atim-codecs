@@ -1,0 +1,16 @@
+{
+  "id": "acw-pir",
+  "name": "ACW-PIRxx",
+  "summary": "Détecteur de mouvement",
+  "family": "detection",
+  "language": "fr",
+  "version": "1.0.0",
+  "codec": "acw-pir-codec.js",
+  "examples": "examples.json",
+  "image": "acw-pir.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

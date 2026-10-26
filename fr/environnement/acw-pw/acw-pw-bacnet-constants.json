@@ -1,0 +1,14 @@
+{
+    "scheduleFormatHelp": {
+        "fr": "setProgram1 à setProgram7 = HH:MM-HH:MM;jours;mode, heures en UTC | ex. 08:00-18:00;127;1 | jours = masque 0-127 (bit0 = lundi … bit6 = dimanche, 0 = programme désactivé) | mode 1 = confort, 2 = éco, 3 = hors gel, 4 = arrêt, 5 = confort -1°C, 6 = confort -2°C | getPilotWireConfiguration = 1 pour relire la configuration",
+        "en": "setProgram1 to setProgram7 = HH:MM-HH:MM;days;mode, times in UTC | e.g. 08:00-18:00;127;1 | days = bitmask 0-127 (bit0 = Monday … bit6 = Sunday, 0 = program disabled) | mode 1 = comfort, 2 = eco, 3 = frost protection, 4 = off, 5 = comfort -1°C, 6 = comfort -2°C | getPilotWireConfiguration = 1 to read the configuration back"
+    },
+    "pilotWireModeHelp": {
+        "fr": "setPilotWireMode = 0-6 | 0 = suivre le calendrier | 1 = confort, 2 = éco, 3 = hors gel, 4 = arrêt, 5 = confort -1°C, 6 = confort -2°C",
+        "en": "setPilotWireMode = 0-6 | 0 = follow the calendar | 1 = comfort, 2 = eco, 3 = frost protection, 4 = off, 5 = comfort -1°C, 6 = comfort -2°C"
+    },
+    "pilotWireCalendarDefaultModeHelp": {
+        "fr": "setPilotWireCalendarDefaultMode = 1-6, mode appliqué en dehors des programmes | 1 = confort, 2 = éco, 3 = hors gel, 4 = arrêt, 5 = confort -1°C, 6 = confort -2°C",
+        "en": "setPilotWireCalendarDefaultMode = 1-6, mode applied outside the programs | 1 = comfort, 2 = eco, 3 = frost protection, 4 = off, 5 = comfort -1°C, 6 = comfort -2°C"
+    }
+}

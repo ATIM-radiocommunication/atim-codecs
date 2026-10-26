@@ -1,0 +1,6 @@
+{
+    "inputConfigHelp": {
+        "fr": "setInput1Config = octet de configuration de l’entrée | bits 0-2 : 0 désactivée, 1 TOR, 2 compteur | bits 4-5 tirage (0 aucun, 1 haut, 2 bas), bits 6-7 front (1 montant, 2 descendant, 3 les deux) | ex. 82 (0x52) = compteur, tirage haut, front montant (configuration usine), 209 (0xD1) = TOR, tirage haut, deux fronts | setCounter1 = nouvelle valeur du compteur | getConfiguration = 1 pour relire la configuration",
+        "en": "setInput1Config = input configuration byte | bits 0-2: 0 disabled, 1 digital input, 2 counter | bits 4-5 pull (0 none, 1 up, 2 down), bits 6-7 edge (1 rising, 2 falling, 3 both) | e.g. 82 (0x52) = counter, pull-up, rising edge (factory setting), 209 (0xD1) = digital input, pull-up, both edges | setCounter1 = new counter value | getConfiguration = 1 to read the configuration back"
+    }
+}

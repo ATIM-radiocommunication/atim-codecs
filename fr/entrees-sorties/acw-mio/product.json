@@ -1,0 +1,16 @@
+{
+  "id": "acw-mio",
+  "name": "ACW-MIO",
+  "summary": "Entrées analogiques 4-20 mA / 0-10 V et entrées TOR",
+  "family": "entrees-sorties",
+  "language": "fr",
+  "version": "1.0.0",
+  "codec": "acw-mio-codec.js",
+  "examples": "examples.json",
+  "image": "acw-mio-2m8.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

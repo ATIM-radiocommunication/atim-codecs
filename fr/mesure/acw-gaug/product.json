@@ -1,0 +1,16 @@
+{
+  "id": "acw-gaug",
+  "name": "ACW-GAUG",
+  "summary": "Jauge de niveau de cuve",
+  "family": "mesure",
+  "language": "fr",
+  "version": "1.0.0",
+  "codec": "acw-gaug-codec.js",
+  "examples": "examples.json",
+  "image": "acw-gaug.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

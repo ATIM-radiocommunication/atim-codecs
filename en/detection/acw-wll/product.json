@@ -1,0 +1,16 @@
+{
+  "id": "acw-wll",
+  "name": "ACW-WLL",
+  "summary": "Leak detector",
+  "family": "detection",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-wll-codec.js",
+  "examples": "examples.json",
+  "image": "acw-wll.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

@@ -1,0 +1,143 @@
+[
+  {
+    "description": "Temperature and humidity",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00808850917de",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "temperature0": 21.81,
+        "humidity0": 61.1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Temperature, humidity and VOC",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00808850917de0c00a0",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "temperature0": 21.81,
+        "humidity0": 61.1,
+        "VOC": 160
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Historised temperature and humidity",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c0808a408850917a217de",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Measurement frame",
+        "period": 60,
+        "temperature0": [
+          22.12,
+          21.81
+        ],
+        "humidity0": [
+          60.5,
+          61.1
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Test frame with timestamp, CO2, VOC, humidity and temperature",
+    "type": "uplink",
+    "input": {
+      "bytes": "c5646239dc0809080905040c01020d0f08",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Test frame",
+        "temperature0": 23.12,
+        "humidity0": 12.84,
+        "VOC": 258,
+        "CO2": 3848,
+        "timestamp": "2023-05-15T13:55:40.000Z"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Keep alive frame",
+    "type": "uplink",
+    "input": {
+      "bytes": "810e100dac",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Keep alive frame",
+        "voltagec": 3.5,
+        "voltagev": 3.6
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the keep alive period to once a day",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Set the datalogging period to 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Enable the timestamp in uplinks",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

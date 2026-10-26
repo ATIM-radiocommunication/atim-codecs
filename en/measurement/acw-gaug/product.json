@@ -1,0 +1,16 @@
+{
+  "id": "acw-gaug",
+  "name": "ACW-GAUG",
+  "summary": "Tank level gauge",
+  "family": "measurement",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-gaug-codec.js",
+  "examples": "examples.json",
+  "image": "acw-gaug.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+    "description": "ACW-MT1: Digital or counting input",
+    "version": "1.0.0",
+    "properties": {
+        "input_state0": {
+            "type": "uint8"
+        },
+        "counter0": {
+            "type": "uint32"
+        },
+        "period": {
+            "type": "uint16",
+            "units": "minutes"
+        },
+        "voltagec": {
+            "type": "float",
+            "units": "volts"
+        },
+        "voltagev": {
+            "type": "float",
+            "units": "volts"
+        },
+        "frame_type": {
+            "type": "string"
+        },
+        "error": {
+            "type": "string"
+        },
+        "timestamp": {
+            "type": "string"
+        },
+        "configuration_accepted": {
+            "type": "uint8"
+        },
+        "downlink_error": {
+            "type": "string"
+        },
+        "config_input1": {
+            "type": "string"
+        },
+        "inputConfigHelp": {
+            "type": "string"
+        },
+        "uplinkFCnt": {
+            "name": "uplinkFCnt",
+            "type": "uint32"
+        },
+        "uplinkRSSI": {
+            "name": "uplinkRSSI",
+            "type": "int16",
+            "units": "decibels-millivolt"
+        },
+        "uplinkSNR": {
+            "name": "uplinkSNR",
+            "type": "float",
+            "units": "decibels"
+        },
+        "setKeepAlivePeriod": {
+            "type": "string",
+            "downlink": true
+        },
+        "setDataloggingPeriod": {
+            "type": "uint16",
+            "downlink": true
+        },
+        "setTimestamp": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "setInput1Config": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "setCounter1": {
+            "type": "uint32",
+            "downlink": true
+        },
+        "getConfiguration": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "scheduleDownlinkStatus": {
+            "name": "scheduleDownlinkStatus",
+            "type": "string"
+        }
+    },
+    "decoder": "acw-mt1-bacnet-codec.js",
+    "encoder": "acw-mt1-bacnet-codec.js"
+}

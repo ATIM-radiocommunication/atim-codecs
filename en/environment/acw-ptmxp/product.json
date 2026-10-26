@@ -1,0 +1,16 @@
+{
+  "id": "acw-ptmxp",
+  "name": "ACW-PTMxP",
+  "summary": "Differential pressure transmitter",
+  "family": "environment",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-ptmxp-codec.js",
+  "examples": "examples.json",
+  "image": "acw-ptmxp.png",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}

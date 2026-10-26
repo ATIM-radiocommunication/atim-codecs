@@ -1,0 +1,179 @@
+{
+    "description": "ACW-PW: Pilot wire heating control",
+    "version": "1.0.0",
+    "properties": {
+        "temperature0": {
+            "type": "float",
+            "units": "celsius"
+        },
+        "humidity0": {
+            "type": "float",
+            "units": "percent"
+        },
+        "period": {
+            "type": "uint16",
+            "units": "minutes"
+        },
+        "voltagec": {
+            "type": "float",
+            "units": "volts"
+        },
+        "voltagev": {
+            "type": "float",
+            "units": "volts"
+        },
+        "frame_type": {
+            "type": "string"
+        },
+        "alert": {
+            "type": "string"
+        },
+        "error": {
+            "type": "string"
+        },
+        "timestamp": {
+            "type": "string"
+        },
+        "pilot_wire_mode": {
+            "type": "uint8"
+        },
+        "pilot_wire_mode_label": {
+            "type": "string"
+        },
+        "calendar_default_mode": {
+            "type": "uint8"
+        },
+        "calendar_default_mode_label": {
+            "type": "string"
+        },
+        "program1": {
+            "type": "string"
+        },
+        "program1_label": {
+            "type": "string"
+        },
+        "program2": {
+            "type": "string"
+        },
+        "program2_label": {
+            "type": "string"
+        },
+        "program3": {
+            "type": "string"
+        },
+        "program3_label": {
+            "type": "string"
+        },
+        "program4": {
+            "type": "string"
+        },
+        "program4_label": {
+            "type": "string"
+        },
+        "program5": {
+            "type": "string"
+        },
+        "program5_label": {
+            "type": "string"
+        },
+        "program6": {
+            "type": "string"
+        },
+        "program6_label": {
+            "type": "string"
+        },
+        "program7": {
+            "type": "string"
+        },
+        "program7_label": {
+            "type": "string"
+        },
+        "configuration_accepted": {
+            "type": "uint8"
+        },
+        "downlink_error": {
+            "type": "string"
+        },
+        "scheduleFormatHelp": {
+            "type": "string"
+        },
+        "pilotWireModeHelp": {
+            "type": "string"
+        },
+        "pilotWireCalendarDefaultModeHelp": {
+            "type": "string"
+        },
+        "uplinkFCnt": {
+            "name": "uplinkFCnt",
+            "type": "uint32"
+        },
+        "uplinkRSSI": {
+            "name": "uplinkRSSI",
+            "type": "int16",
+            "units": "decibels-millivolt"
+        },
+        "uplinkSNR": {
+            "name": "uplinkSNR",
+            "type": "float",
+            "units": "decibels"
+        },
+        "setKeepAlivePeriod": {
+            "type": "string",
+            "downlink": true
+        },
+        "setDataloggingPeriod": {
+            "type": "uint16",
+            "downlink": true
+        },
+        "setTimestamp": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "setPilotWireMode": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "setPilotWireCalendarDefaultMode": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "setProgram1": {
+            "type": "string",
+            "downlink": true
+        },
+        "setProgram2": {
+            "type": "string",
+            "downlink": true
+        },
+        "setProgram3": {
+            "type": "string",
+            "downlink": true
+        },
+        "setProgram4": {
+            "type": "string",
+            "downlink": true
+        },
+        "setProgram5": {
+            "type": "string",
+            "downlink": true
+        },
+        "setProgram6": {
+            "type": "string",
+            "downlink": true
+        },
+        "setProgram7": {
+            "type": "string",
+            "downlink": true
+        },
+        "getPilotWireConfiguration": {
+            "type": "uint8",
+            "downlink": true
+        },
+        "scheduleDownlinkStatus": {
+            "name": "scheduleDownlinkStatus",
+            "type": "string"
+        }
+    },
+    "decoder": "acw-pw-bacnet-codec.js",
+    "encoder": "acw-pw-bacnet-codec.js"
+}
