@@ -1,0 +1,678 @@
+[
+  {
+    "description": "Température et humidité",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00808850917de",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "temperature0": 21.81,
+        "humidity0": 61.1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Température et humidité historisées",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c0808a408850917a217de",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "periode": 60,
+        "temperature0": [
+          22.12,
+          21.81
+        ],
+        "humidity0": [
+          60.5,
+          61.1
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Deux voies de température et d’humidité",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00808850917de180870191794",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "temperature0": 21.81,
+        "temperature1": 21.6,
+        "humidity0": 61.1,
+        "humidity1": 60.36
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de test horodatée : CO2, taux, humidité et température",
+    "type": "uplink",
+    "input": {
+      "bytes": "c5646239dc0809080905040c01020d0f08",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de test",
+        "temperature0": 23.12,
+        "humidity0": 12.84,
+        "taux0": 258,
+        "CO2": 3848,
+        "horodatage": "2023-05-15T13:55:40.000Z"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Deux températures et pression différentielle",
+    "type": "uplink",
+    "input": {
+      "bytes": "a008088518085006fd24",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "temperature0": 21.81,
+        "temperature1": 21.28,
+        "pression_differentielle": -732
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Entrées digitales et compteur",
+    "type": "uplink",
+    "input": {
+      "bytes": "a001010400000052",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "compteur0": 82,
+        "input_state0": 1,
+        "input_state1": 0,
+        "input_state2": 0,
+        "input_state3": 0
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Changement d'état des entrées",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00111",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "input_state0": "mise à l'état haut",
+        "input_state1": "état bas",
+        "input_state2": "état bas",
+        "input_state3": "état bas"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Courant et tension historisés, 2 échantillons",
+    "type": "uplink",
+    "input": {
+      "bytes": "a1003c0b03e804b01a09600974",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "periode": 60,
+        "tension1": [
+          2.4,
+          2.42
+        ],
+        "courant0": [
+          10,
+          12
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Taux (niveau de cuve) et température",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00c0056080934",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "temperature0": 23.56,
+        "taux0": 86
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Température, humidité et compteur de détections PIR",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00808850917de030005",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "temperature0": 21.81,
+        "humidity0": 61.1,
+        "compteur0": 5
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Distance",
+    "type": "uplink",
+    "input": {
+      "bytes": "a00704d2",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "distance": 1234
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Luminosité",
+    "type": "uplink",
+    "input": {
+      "bytes": "a0052123",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de mesure",
+        "lux": 11.64
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Alerte : dépassement du seuil haut, courant de la voie 0",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d4b03e8",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d'alerte",
+        "alerte": "Dépassement du seuil haut sur le courant voie 0",
+        "courant0": 10
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Fin d’alerte : tension de la voie 1 revenue entre les seuils",
+    "type": "uplink",
+    "input": {
+      "bytes": "8d1a1194",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d'alerte",
+        "alerte": "Retour entre les seuils sur la tension voie 1",
+        "tension1": 4.5
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame d’erreur",
+    "type": "uplink",
+    "input": {
+      "bytes": "8e019e",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d'erreur",
+        "erreur": "Détection d’un déplacement/vol sur le produit"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie",
+    "type": "uplink",
+    "input": {
+      "bytes": "810e100dac",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de vie",
+        "voltagec": 3.5,
+        "voltagev": 3.6
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Coupure de câble détectée",
+    "type": "uplink",
+    "input": {
+      "bytes": "8f1c20",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame spécifique",
+        "cable_coupe": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Configuration acceptée",
+    "type": "uplink",
+    "input": {
+      "bytes": "8600",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Réponse à une trame de configuration",
+        "configuration_acceptee": 1,
+        "parametres_refuses": []
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Configuration refusée pour les paramètres 1 et 3",
+    "type": "uplink",
+    "input": {
+      "bytes": "8605",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Réponse à une trame de configuration",
+        "configuration_acceptee": 0,
+        "parametres_refuses": [
+          1,
+          3
+        ]
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Relecture des paramètres communs, et d’un paramètre propre au produit en hexadécimal",
+    "type": "uplink",
+    "input": {
+      "bytes": "870403060b019400113c001a16",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Réponse à une trame de commande",
+        "commande": 4,
+        "periode_trame_vie": "Tous les jours",
+        "horodatage_active": 1,
+        "profondeur_historique": 1,
+        "nombre_echantillons": 2,
+        "periode_emission": 60,
+        "parametre26": "16"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Erreur de commande : paramètre inconnu",
+    "type": "uplink",
+    "input": {
+      "bytes": "8803",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Réponse à une trame erronee",
+        "erreur_downlink": "Paramètre inconnu"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Ancien produit : entrées et sorties digitales, température et compteur",
+    "type": "uplink",
+    "input": {
+      "bytes": "6efd0100fa00017ce6",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d’entrées/sorties digitales, température et compteur 1",
+        "temperature0": 25,
+        "compteur1": 97510,
+        "output_state0": 1,
+        "output_state1": 0,
+        "output_state2": 0,
+        "output_state3": 0,
+        "output_state4": 0,
+        "output_state5": 0,
+        "output_state6": 0,
+        "output_state7": 0,
+        "input_state0": 1,
+        "input_state1": 0,
+        "input_state2": 1,
+        "input_state3": 1,
+        "input_state4": 1,
+        "input_state5": 1,
+        "input_state6": 1,
+        "input_state7": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Ancien produit : entrées digitales, température et compteur",
+    "type": "uplink",
+    "input": {
+      "bytes": "4ef5ff00fa00017ce6",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame d’entrées digitales,température et compteur 1",
+        "temperature0": 25,
+        "compteur1": 97510,
+        "input_state0": 1,
+        "input_state1": 0,
+        "input_state2": 1,
+        "input_state3": 0,
+        "input_state4": 1,
+        "input_state5": 1,
+        "input_state6": 1,
+        "input_state7": 1,
+        "input_state8": 1,
+        "input_state9": 1,
+        "input_state10": 1,
+        "input_state11": 1,
+        "input_state12": 1,
+        "input_state13": 1,
+        "input_state14": 1,
+        "input_state15": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Ancien produit : entrée analogique 0-10 V",
+    "type": "uplink",
+    "input": {
+      "bytes": "18007d78",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de relevé périodique d'une valeur 0-10V",
+        "logic_level_dinda": 0,
+        "tension": 5
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Ancien produit : entrée analogique 4-20 mA",
+    "type": "uplink",
+    "input": {
+      "bytes": "19006f86",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de relevé périodique d'une valeur 0- 20mA",
+        "logic_level_dinda": 0,
+        "current": 12
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Ancien produit : changement d’état des entrées du MR2",
+    "type": "uplink",
+    "input": {
+      "bytes": "090003",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de détection de changement d'état (TOR)",
+        "wirecut": 0,
+        "logic_level1": 1,
+        "logic_level0": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Ancien produit : trame compteur ECO (LoRaWAN, six index 32 bits)",
+    "type": "uplink",
+    "input": {
+      "bytes": "30000000050000000400000003000000020000000100000000",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame Compteur mode ECO (Compteur 1 6 index 32 bits LoraWan)",
+        "index5": 5,
+        "index4": 4,
+        "index3": 3,
+        "index2": 2,
+        "index1": 1,
+        "index0": 0
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Ancien produit : trame compteur ECO (Sigfox, cinq deltas 12 bits)",
+    "type": "uplink",
+    "input": {
+      "bytes": "3b003e8005004003002001",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame 3B Compteur mode ECO (Compteur 1 20 bits et 5 deltas 12 bits concaténés SIGFOX)",
+        "counter_init": 1000,
+        "delta1": 5,
+        "delta2": 4,
+        "delta3": 3,
+        "delta4": 2,
+        "delta5": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Ancien produit : trame PIR",
+    "type": "uplink",
+    "input": {
+      "bytes": "3201000123002a0885",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Produit PIR",
+        "type_trame": "Trame d'ouverture boitier",
+        "capteur_dq": "Non utilise",
+        "compteur_pir": 42,
+        "temperature_pir": 2181,
+        "boitier": "boitier ouvert"
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Ancien produit : relevé périodique des deux températures du TM2D",
+    "type": "uplink",
+    "input": {
+      "bytes": "1a0190ff70",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de relevé périodique de deux temperatures",
+        "temperature0": 25,
+        "temperature1": -9
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Ancien produit : relevé périodique de la température du TM1D",
+    "type": "uplink",
+    "input": {
+      "bytes": "1b0190",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Trame de relevé périodique de la température",
+        "temperature0": 25
+      },
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Type de trame inconnu",
+    "type": "uplink",
+    "input": {
+      "bytes": "8a00",
+      "fPort": 1
+    },
+    "output": {
+      "data": {
+        "frame_type": "Type de trame inconnu"
+      },
+      "errors": [
+        "Unknown frame type for payload 8a00"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie une fois par jour",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Once every day"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Trame de vie une fois par jour (valeur en français)",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setKeepAlivePeriod": "Tous les jours"
+      }
+    },
+    "output": {
+      "bytes": "0306",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Période d'enregistrement à 300 minutes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setDataloggingPeriod": 300
+      }
+    },
+    "output": {
+      "bytes": "d403012c01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  {
+    "description": "Activer l'horodatage des trames montantes",
+    "type": "downlink-encode",
+    "input": {
+      "data": {
+        "setTimestamp": 1
+      }
+    },
+    "output": {
+      "bytes": "0b01",
+      "fPort": 1,
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

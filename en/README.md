@@ -67,6 +67,12 @@ Step-by-step instructions are in [docs/platforms.md](docs/platforms.md).
 | ACW-MIO (C0, C1, 1M8, 2M8, MT1, WLK) | 4-20 mA / 0-10 V analog inputs and digital inputs | [io-modules/acw-mio](io-modules/acw-mio) |
 | ACW-MT1 | Digital or counting input | [io-modules/acw-mt1](io-modules/acw-mt1) |
 
+### Generic decoder
+
+| Device | Description | Codec |
+|---|---|---|
+| Other ACW product (ACW-LVL…) | Decodes every frame of the ACW range without knowing the product: fields named after the measurement type and the channel | [generic/acw-generic](generic/acw-generic) |
+
 ## Quick start (Node.js)
 
 ```js

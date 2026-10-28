@@ -1,5 +1,9 @@
 # Historique des versions
 
+## Non publié
+
+- **ACW-GENERIC** : nouveau décodeur générique ([generique/acw-generic](generique/acw-generic)), pour les produits ACW sans codec dédié (ACW-LVL…). Il remplace l’ancien décodeur générique ATIM et repose sur le même cœur corrigé que les codecs produits : trame étendue LTE-M, position GPS, horodatage ISO 8601, mesures en nombres, `errors`. Tous les types de mesure sont décodés par voie (`temperature0`…, `compteur0`…, `courant0`…, `taux0`…, `distance`, `lux`…), ainsi que les trames des anciens produits (DIND, MR2, PIR, TM1D / TM2D), les réponses aux trames descendantes (paramètres communs relus, les autres en hexadécimal) et les commandes descendantes communes. Par rapport à l’ancien décodeur générique, la trame de relevé périodique de deux températures du TM2D rend les deux sondes (la sonde 2 n’était lue que pour la trame à une température).
+
 ## 2026-10-16 – Première version publique
 
 Première version publique des codecs ATIM.

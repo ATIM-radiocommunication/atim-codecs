@@ -301,5 +301,21 @@
       "decodeDownlink"
     ],
     "path": "entrees-sorties/acw-mt1"
+  },
+  {
+    "id": "acw-generic",
+    "name": "ACW-GENERIC",
+    "summary": "Décodeur générique de la gamme ACW",
+    "family": "generique",
+    "language": "fr",
+    "version": "1.0.0",
+    "codec": "acw-generic-codec.js",
+    "examples": "examples.json",
+    "entryPoints": [
+      "decodeUplink",
+      "encodeDownlink",
+      "decodeDownlink"
+    ],
+    "path": "generique/acw-generic"
   }
 ]

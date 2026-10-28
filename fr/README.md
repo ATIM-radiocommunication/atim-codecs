@@ -67,6 +67,12 @@ La procédure détaillée est dans [docs/plateformes.md](docs/plateformes.md).
 | ACW-MIO (C0, C1, 1M8, 2M8, MT1, WLK) | Entrées analogiques 4-20 mA / 0-10 V et entrées TOR | [entrees-sorties/acw-mio](entrees-sorties/acw-mio) |
 | ACW-MT1 | Entrée TOR ou comptage | [entrees-sorties/acw-mt1](entrees-sorties/acw-mt1) |
 
+### Décodeur générique
+
+| Équipement | Description | Codec |
+|---|---|---|
+| Autre produit ACW (ACW-LVL…) | Décode toutes les trames de la gamme ACW sans connaître le produit : champs nommés par type de mesure et par voie | [generique/acw-generic](generique/acw-generic) |
+
 ## Démarrage rapide (Node.js)
 
 ```js

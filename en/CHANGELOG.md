@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **ACW-GENERIC**: new generic decoder ([generic/acw-generic](generic/acw-generic)), for the ACW products without a dedicated codec (ACW-LVL…). It replaces the former ATIM generic decoder and is built on the same corrected core as the product codecs: extended LTE-M frame, GPS position, ISO 8601 timestamp, numeric measurements, `errors`. Every measurement type is decoded per channel (`temperature0`…, `counter0`…, `current0`…, `rate0`…, `distance`, `lux`…), as well as the legacy frames (DIND, MR2, PIR, TM1D / TM2D), the responses to downlink frames (common parameters read back, the others as hex) and the common downlink commands. Compared with the former generic decoder, the TM2D two-temperature periodic frame now returns both probes (the second probe was read for the single-temperature frame only).
+
 ## 2026-10-16 – Initial public release
 
 First public release of the ATIM codecs.

@@ -9,6 +9,7 @@ const FAMILIES = {
   mesure: 'measurement',
   detection: 'detection',
   'entrees-sorties': 'io-modules',
+  generique: 'generic',
 };
 
 // French string literals of the codecs -> English. Whole labels, plus the fragments used to
@@ -267,6 +268,21 @@ const COMMENTS = {
   'Réponses aux trames descendantes : configuration (x6), commande (x7), trame erronée (x8).': 'Responses to downlink frames: configuration (x6), command (x7), invalid frame (x8).',
   'Programme : "HH:MM-HH:MM;jours;mode" (UTC) ou { start, end, days, mode }.': 'Program: "HH:MM-HH:MM;days;mode" (UTC) or { start, end, days, mode }.',
   'Commandes du fil pilote : modes (paramètres 37 et 38), programmes (paramètres 30 à 36), relecture (commande 4).': 'Pilot wire commands: modes (parameters 37 and 38), programs (parameters 30 to 36), read-back (command 4).',
+  // generic decoder (ACW-GENERIC)
+  "Mesures des trames de mesure, de test et d'alerte : [champ de la trame, champ de sortie, par voie, octets par échantillon, conversion]": 'Measurements of the measurement, test and alert frames: [frame field, output field, per channel, bytes per sample, conversion]',
+  "Un champ par type de mesure et par voie (0 à 3) ; CO2, distance et pression différentielle n'ont pas de voie": 'One field per measurement type and per channel (0 to 3); CO2, distance and differential pressure have no channel',
+  "Entrées TOR : niveau des entrées 1 à 4 (bits 0-3) ; au-delà de 15, les bits 4-7 signalent un changement d'état": 'Digital inputs: level of inputs 1 to 4 (bits 0-3); above 15, bits 4-7 flag a change of state',
+  'Luminosité : exposant (4 bits) et mantisse (12 bits), en centièmes de lux': 'Illuminance: exponent (4 bits) and mantissa (12 bits), in hundredths of lux',
+  'REPONSES AUX TRAMES DESCENDANTES': 'RESPONSES TO DOWNLINK FRAMES',
+  'Paramètres du protocole downlink ATIM communs à la gamme': 'ATIM downlink protocol parameters common to the range',
+  'Paramètres communs décodés ; les paramètres propres à un produit sont rendus en hexadécimal (parametre<numéro>)': 'Common parameters are decoded; the parameters of a given product are returned as hex (parameter<number>)',
+  'Température des anciens produits : DIND en dixièmes de °C, sondes S1 et S2 des TM1D / TM2D en 1/16 °C': 'Temperature of the legacy products: DIND in tenths of °C, S1 and S2 probes of the TM1D / TM2D in 1/16 °C',
+  'Compteurs 32 bits des anciens produits (DIND, MR2) et index de la trame ECO du MR2': '32-bit counters of the legacy products (DIND, MR2) and indexes of the MR2 ECO frame',
+  'Entrées et sorties TOR des DIND : un bit par entrée ou sortie, bit 0 = entrée 1': 'DIND digital inputs and outputs: one bit per input or output, bit 0 = input 1',
+  'Entrées TOR des trames 0x4x : 16 entrées sur 2 octets, bit 0 du premier octet = entrée 1': 'Digital inputs of the 0x4x frames: 16 inputs on 2 bytes, bit 0 of the first byte = input 1',
+  'MR2 : état de la coupure de câble et niveaux des entrées (trame 0x09), compteur et 5 deltas des trames ECO Sigfox (0x39 à 0x3B)': 'MR2: cable cut state and input levels (frame 0x09), counter and 5 deltas of the Sigfox ECO frames (0x39 to 0x3B)',
+  'DINDA : entrée 4-20 mA et entrée 0-10 V': 'DINDA: 4-20 mA input and 0-10 V input',
+  'TM1D / TM2D : sonde 1, puis sonde 2 si la trame la contient': 'TM1D / TM2D: probe 1, then probe 2 when the frame carries it',
   // the dinrsm rewrite
   "Lecture d'un entier non signe 16 bits big-endian, sans Buffer.": 'Read an unsigned 16-bit big-endian integer, without Buffer.',
   "Octet a la position donnee, ou null s'il est absent.": 'Byte at the given offset, or null when missing.',
@@ -381,6 +397,10 @@ const WORDS = {
   valeur: 'value',
   vers: 'to',
   voie: 'channel',
+  voies: 'channels',
+  grandeur: 'quantity',
+  mesures: 'measures',
+  niveau: 'level',
 };
 
 // Whole names that are not translated word by word: either the word-by-word translation would
@@ -589,6 +609,27 @@ const EXAMPLES_FR = {
   'Program 2 disabled': 'Programme 2 désactivé',
   'Program 1 as an object, 08:01-18:00 UTC': 'Programme 1 sous forme d’objet, 08:01-18:00 UTC',
   'Read the pilot wire configuration': 'Relire la configuration du fil pilote',
+  // generic decoder (ACW-GENERIC)
+  'Two temperature and humidity channels': 'Deux voies de température et d’humidité',
+  'Timestamped test frame: CO2, rate, humidity and temperature': 'Trame de test horodatée : CO2, taux, humidité et température',
+  'Rate (tank level) and temperature': 'Taux (niveau de cuve) et température',
+  'Temperature, humidity and PIR detection counter': 'Température, humidité et compteur de détections PIR',
+  'Distance': 'Distance',
+  'Alert: high threshold exceeded, current of channel 0': 'Alerte : dépassement du seuil haut, courant de la voie 0',
+  'End of alert: voltage of channel 1 back within the thresholds': 'Fin d’alerte : tension de la voie 1 revenue entre les seuils',
+  'Error frame': 'Trame d’erreur',
+  'Common parameters read-back, and a product parameter in hex': 'Relecture des paramètres communs, et d’un paramètre propre au produit en hexadécimal',
+  'Legacy product: digital inputs/outputs, temperature and counter': 'Ancien produit : entrées et sorties digitales, température et compteur',
+  'Legacy product: digital inputs, temperature and counter': 'Ancien produit : entrées digitales, température et compteur',
+  'Legacy product: 0-10 V analogue input': 'Ancien produit : entrée analogique 0-10 V',
+  'Legacy product: 4-20 mA analogue input': 'Ancien produit : entrée analogique 4-20 mA',
+  'Legacy product: change of state of the MR2 inputs': 'Ancien produit : changement d’état des entrées du MR2',
+  'Legacy product: ECO counter frame (LoRaWAN, six 32-bit indexes)': 'Ancien produit : trame compteur ECO (LoRaWAN, six index 32 bits)',
+  'Legacy product: ECO counter frame (Sigfox, five 12-bit deltas)': 'Ancien produit : trame compteur ECO (Sigfox, cinq deltas 12 bits)',
+  'Legacy product: PIR frame': 'Ancien produit : trame PIR',
+  'Legacy product: TM2D periodic report of two temperatures': 'Ancien produit : relevé périodique des deux températures du TM2D',
+  'Legacy product: TM1D periodic report of the temperature': 'Ancien produit : relevé périodique de la température du TM1D',
+  'Unknown frame type': 'Type de trame inconnu',
 };
 
 // Translate a FR decoder output value (whole label, or composed alert) to English.

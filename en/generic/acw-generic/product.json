@@ -1,0 +1,15 @@
+{
+  "id": "acw-generic",
+  "name": "ACW-GENERIC",
+  "summary": "Generic decoder for the ACW range",
+  "family": "generic",
+  "language": "en",
+  "version": "1.0.0",
+  "codec": "acw-generic-codec.js",
+  "examples": "examples.json",
+  "entryPoints": [
+    "decodeUplink",
+    "encodeDownlink",
+    "decodeDownlink"
+  ]
+}
